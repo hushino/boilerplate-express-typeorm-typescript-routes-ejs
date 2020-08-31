@@ -1,0 +1,22 @@
+<% include ./layouts/header %>
+<div class="container-fluid" id="backgroundd" style="min-height: calc(100vh - 60px) !important;">
+  <div id="central-body">
+    <div id="clock">RRHH</div>
+  </div>
+</div>
+<script src="/animations/three.r119.min.js"></script>
+<script src="/animations/vanta.rings.min.js"></script>
+<script>
+  VANTA.RINGS({
+    el: "#backgroundd",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00
+  })
+</script>
+
+<% include ./layouts/footer %>

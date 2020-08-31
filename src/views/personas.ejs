@@ -1,0 +1,111 @@
+<% include ./layouts/header %>
+<h1>Personas</h1>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4">
+            <p>
+                <button class="btn  btn-secondary" type="button" data-toggle="collapse" data-target="#collapseExample"
+                    aria-expanded="false" aria-controls="collapseExample">
+                    Buscador
+                </button>
+            </p>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body" style="margin-bottom: 10px;">
+                    <form action="/buscar" method="POST">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="buscar" id="buscar" aria-describedby="buscar">
+                            <small id="buscar" class="form-text text-muted">Inserte Numero de DNI, Legajo o
+                                Nombre/Apellido.</small>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Legajo</th>
+            <th scope="col">DNI</th>
+            <th scope="col">Ver</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% if(typeof serie !== 'undefined') { %>
+        <% serie.forEach(function(serie) { %>
+        <tr>
+            <td><%- serie.nombre.substring(0,30)%></td>
+            <td><%- serie.apellido.substring(0,30) %></td>
+            <td><%- serie.legajo %></td>
+            <td><%- serie.dni %></td>
+            <td>
+                <a class="ver" href="/verPersona/<%= serie.id %>">
+                    <button type="button" class="btn btn-info">
+                        Ver
+                    </button>
+                </a>
+                <a class="ver" href="/updatePersona/<%= serie.id %>">
+                    <button type="button" class="btn btn-info">
+                        Actualizar
+                    </button>
+                </a>
+            </td>
+        </tr>
+        <% }); %>
+        <% } %>
+    </tbody>
+
+</table>
+
+
+<nav aria-label="Page navigation example">
+    <% if(typeof pages !== 'undefined') { %>
+    <% if (pages > 0) { %>
+    <ul class="pagination">
+        <% if (current == 1) { %>
+        <li class="page-item"><a class="page-link" class="disabled">
+                << </a> <% } else { %> <a class="page-link" href="/personas/1">
+                        <<< /a> <% } %> <% var i = (Number(current) > 5 ? Number(current) - 4 : 1) %>
+                            <% if (i !== 1) { %> <a class="page-link" class="disabled">...
+                            </a></li>
+        <% } %>
+        <% for (; i <= (Number(current) + 4) && i <= pages; i++) { %>
+        <% if (i == current) { %>
+        <li class="page-item"><a class="page-link active"><%= i %></a></li>
+        <% } else { %>
+        <li class="page-item"><a class="page-link" href="/personas/<%= i %>"><%= i %></a></li>
+        <% } %>
+        <% if (i == Number(current) + 4 && i < pages) { %>
+        <li class="page-item"><a class="page-link disabled">...</a></li>
+        <% } %>
+        <% } %>
+        <% if (current == pages) { %>
+        <li class="page-item"><a class="page-link disabled">>></a></li>
+        <% } else { %>
+        <li class="page-item"><a class="page-link" href="/personas/<%= pages %>">>></a></li>
+        <% } %>
+    </ul>
+    <% } %>
+    <% } %>
+</nav>
+
+<% include ./layouts/footer %>
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"
+    integrity="sha256-Y1rRlwTzT5K5hhCBfAFWABD4cU13QGuRN6P5apfWzVs=" crossorigin="anonymous"></script>
+<script>
+    $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+    });
+</script> -->

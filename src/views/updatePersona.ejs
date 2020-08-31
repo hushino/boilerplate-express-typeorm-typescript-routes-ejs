@@ -1,0 +1,712 @@
+<% include ./layouts/header %>
+<h1>Agregar una persona nueva</h1>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <!-- enctype="multipart/form-data" -->
+            <form class="pure-form pure-form-stacked" action="/updatePersona" method="POST">
+
+                <div class="form-group" hidden>
+                    <input value="<%=persona.id%>" type="number" class="form-control" id="exampleInputEmail1"
+                        name="id" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Nombre</label>
+                    <input value="<%=persona.nombre%>" type="text" class="form-control" id="exampleInputEmail1"
+                        name="nombre" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Apellido</label>
+                    <input value="<%= persona.apellido %>" type="text" class="form-control" id="exampleInputEmail1"
+                        name="apellido" />
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Cuil</label>
+                    <input value="<%= persona.cuil %>" type="number" class="form-control" id="exampleInputEmail1"
+                        name="cuil" />
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">DNI</label>
+                    <input value="<%= persona.dni %>" type="number" class="form-control" id="exampleInputEmail1"
+                        name="dni" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Legajo</label>
+                    <input value="<%= persona.legajo %>" type="text" class="form-control" id="exampleInputEmail1"
+                        name="legajo" />
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Fecha De Nacimiento</label>
+                    <input value="<%= persona.fechaDeNacimiento %>" type="date" class="form-control"
+                        id="exampleInputEmail1" name="fechaDeNacimiento" />
+                </div>
+
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Apodo</label>
+                    <input value="<%= persona.apodo %>" type="text" class="form-control" id="exampleInputEmail1"
+                        name="apodo" />
+                </div>
+                <!-- <div class="form-group">
+                    <label for="exampleInputEmail1">Foto</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="foto" />
+                </div> -->
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Con o sin seguro</label>
+                    <input value="<%= persona.conosinseguro %>" type="text" class="form-control" id="exampleInputEmail1"
+                        name="conosinseguro" />
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Estado Civil</label>
+                    <input value="<%= persona.estadocivil %>" type="text" class="form-control" id="exampleInputEmail1"
+                        name="estadocivil" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Soltero</label>
+                    <input value="<%= persona.soltero %>" type="text" class="form-control" id="exampleInputEmail1"
+                        name="soltero" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Casado</label>
+                    <input value="<%= persona.casado %>" type="text" class="form-control" id="exampleInputEmail1"
+                        name="casado" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Conviviente</label>
+                    <input value="<%= persona.conviviente %>" type="text" class="form-control" id="exampleInputEmail1"
+                        name="conviviente" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Viudo</label>
+                    <input value="<%= persona.viudo %>" type="text" class="form-control" id="exampleInputEmail1"
+                        name="viudo" />
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Domicilio</label>
+                    <input value="<%= persona.domicilio %>" type="text" class="form-control" id="exampleInputEmail1"
+                        name="domicilio" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Lugar</label>
+                    <input value="<%= persona.lugar %>" type="text" class="form-control" id="exampleInputEmail1"
+                        name="lugar" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Calle</label>
+                    <input value="<%= persona.calle %>" type="text" class="form-control" id="exampleInputEmail1"
+                        name="calle" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Numero</label>
+                    <input value="<%= persona.numero %>" type="text" class="form-control" id="exampleInputEmail1"
+                        name="numero" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Telefono Fijo</label>
+                    <input value="<%= persona.telefonoFijo %>" type="text" class="form-control" id="exampleInputEmail1"
+                        name="telefonoFijo" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Numero De Celular</label>
+                    <input value="<%= persona.numeroDeCelular %>" type="text" class="form-control"
+                        id="exampleInputEmail1" name="numeroDeCelular" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Oficio/profecion</label>
+                    <input value="<%= persona.oficioprofecion %>" type="text" class="form-control"
+                        id="exampleInputEmail1" name="oficioprofecion" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Nivel De Estudios</label>
+                    <input value="<%= persona.niveldeestudios %>" type="text" class="form-control"
+                        id="exampleInputEmail1" name="niveldeestudios" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Grupo Sanguineo</label>
+                    <input value="<%= persona.grupoSanguineo %>" type="text" class="form-control"
+                        id="exampleInputEmail1" name="grupoSanguineo" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Factor</label>
+                    <input value="<%= persona.factor %>" type="text" class="form-control" id="exampleInputEmail1"
+                        name="factor" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Donante</label>
+                    <input value="<%= persona.donante %>" type="text" class="form-control" id="exampleInputEmail1"
+                        name="donante" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Diabetes</label>
+                    <input value="<%= persona.diabetes %>" type="text" class="form-control" id="exampleInputEmail1"
+                        name="diabetes" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Hipertension</label>
+                    <input value="<%= persona.hipertension %>" type="text" class="form-control" id="exampleInputEmail1"
+                        name="hipertension" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Alergias</label>
+                    <input value="<%= persona.alergias %>" type="text" class="form-control" id="exampleInputEmail1"
+                        name="alergias" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Asma</label>
+                    <input value="<%= persona.asma %>" type="text" class="form-control" id="exampleInputEmail1"
+                        name="asma" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Otros</label>
+                    <input value="<%= persona.otros %>" type="text" class="form-control" id="exampleInputEmail1"
+                        name="otros" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Fecha De Ingreso</label>
+                    <input value="<%= persona.fechadeingreso %>" type="text" class="form-control"
+                        id="exampleInputEmail1" name="fechadeingreso" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Instrumento Legal</label>
+                    <input value="<%= persona.instrumentolegal %>" type="text" class="form-control"
+                        id="exampleInputEmail1" name="instrumentolegal" />
+                </div>
+        </div>
+        <div class="col">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Categoria</label>
+                <input value="<%= persona.categoria %>" type="text" class="form-control" id="exampleInputEmail1"
+                    name="categoria" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Item</label>
+                <input value="<%= persona.item %>" type="text" class="form-control" id="exampleInputEmail1"
+                    name="item" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Planta</label>
+                <input value="<%= persona.planta %>" type="text" class="form-control" id="exampleInputEmail1"
+                    name="planta" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Area</label>
+                <input value="<%= persona.area %>" type="text" class="form-control" id="exampleInputEmail1"
+                    name="area" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Direccion</label>
+                <input value="<%= persona.direccion %>" type="text" class="form-control" id="exampleInputEmail1"
+                    name="direccion" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Años</label>
+                <input value="<%= persona.annos %>" type="text" class="form-control" id="exampleInputEmail1"
+                    name="annos" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Meses</label>
+                <input value="<%= persona.meses %>" type="text" class="form-control" id="exampleInputEmail1"
+                    name="meses" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Dias</label>
+                <input value="<%= persona.dias %>" type="text" class="form-control" id="exampleInputEmail1"
+                    name="dias" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Realizo ComputoDe Servicios</label>
+                <input value="<%= persona.realizoComputoDeServicios %>" type="text" class="form-control"
+                    id="exampleInputEmail1" name="realizoComputoDeServicios" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">posee Conocimiento En Maquinas Viales</label>
+                <input value="<%= persona.poseeConocimientoEnMaquinasViales %>" type="text" class="form-control"
+                    id="exampleInputEmail1" name="poseeConocimientoEnMaquinasViales" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">En caso de emergencia celular</label>
+                <input value="<%= persona.casoemergenciacelular %>" type="text" class="form-control"
+                    id="exampleInputEmail1" name="casoemergenciacelular" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">En caso de emergencia fijo</label>
+                <input value="<%= persona.casoemergenciafijo %>" type="text" class="form-control"
+                    id="exampleInputEmail1" name="casoemergenciafijo" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">En caso de emergencia nombre</label>
+                <input value="<%= persona.casoemergencianombre %>" type="text" class="form-control"
+                    id="casoemergencianombre" name="casoemergencianombre" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">En caso de emergencia celular 2</label>
+                <input value="<%= persona.casoemergenciacelular2 %>" type="text" class="form-control"
+                    id="exampleInputEmail1" name="casoemergenciacelular2" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">En caso de emergencia fijo 2</label>
+                <input value="<%= persona.casoemergenciafijo2 %>" type="text" class="form-control"
+                    id="exampleInputEmail1" name="casoemergenciafijo2" />
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">En caso de emergencia nombre 2</label>
+                <input value="<%= persona.casoemergencianombre2 %>" type="text" class="form-control"
+                    id="exampleInputEmail1" name="casoemergencianombre2" />
+            </div>
+            <p>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample1"
+                    aria-expanded="false" aria-controls="collapseExample1">
+                    Datos de familiar a cargo
+                </button>
+            </p>
+            <div class="collapse" id="collapseExample1">
+                <div class="card card-body">
+
+                    <h3>Familiar a cargo 1</h3>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Nombre</label>
+                        <input value="<%= persona.familiaracargonombre %>" type="text" class="form-control"
+                            id="exampleInputEmail1" name="familiaracargonombre" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">DNI</label>
+                        <input value="<%= persona.familiaracargodni %>" type="number" class="form-control"
+                            id="exampleInputEmail1" name="familiaracargodni" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Edad</label>
+                        <input value="<%= persona.familiaracargoedad %>" type="number" class="form-control"
+                            id="exampleInputEmail1" name="familiaracargoedad" />
+                    </div>
+
+
+                    <h3>Familiar a cargo 2</h3>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Nombre</label>
+                        <input value="<%= persona.familiaracargonombre2 %>" type="text" class="form-control"
+                            id="exampleInputEmail1" name="familiaracargonombre2" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">DNI</label>
+                        <input value="<%= persona.familiaracargodni2 %>" type="number" class="form-control"
+                            id="exampleInputEmail1" name="familiaracargodni2" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Edad</label>
+                        <input value="<%= persona.familiaracargoedad2 %>" type="number" class="form-control"
+                            id="exampleInputEmail1" name="familiaracargoedad2" />
+                    </div>
+
+
+                    <h3>Familiar a cargo 3</h3>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Nombre</label>
+                        <input value="<%= persona.familiaracargonombre3 %>" type="text" class="form-control"
+                            id="exampleInputEmail1" name="familiaracargonombre3" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">DNI</label>
+                        <input value="<%= persona.familiaracargodni3 %>" type="number" class="form-control"
+                            id="exampleInputEmail1" name="familiaracargodni3" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Edad</label>
+                        <input value="<%= persona.familiaracargoedad3 %>" type="text" class="form-control"
+                            id="exampleInputEmail1" name="familiaracargoedad3" />
+                    </div>
+
+                    <h3>Familiar a cargo 4</h3>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Nombre</label>
+                        <input value="<%= persona.familiaracargonombre4 %>" type="text" class="form-control"
+                            id="exampleInputEmail1" name="familiaracargonombre4" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">DNI</label>
+                        <input value="<%= persona.familiaracargodni4 %>" type="number" class="form-control"
+                            id="exampleInputEmail1" name="familiaracargodni4" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Edad</label>
+                        <input value="<%= persona.familiaracargoedad4 %>" type="text" class="form-control"
+                            id="exampleInputEmail1" name="familiaracargoedad4" />
+                    </div>
+
+                    <h3>Familiar a cargo 5</h3>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Nombre</label>
+                        <input value="<%= persona.familiaracargonombre5 %>" type="text" class="form-control"
+                            id="exampleInputEmail1" name="familiaracargonombre5" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">DNI</label>
+                        <input value="<%= persona.familiaracargodni5 %>" type="number" class="form-control"
+                            id="exampleInputEmail1" name="familiaracargodni5" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Edad</label>
+                        <input value="<%= persona.familiaracargoedad5%>" type="text" class="form-control"
+                            id="exampleInputEmail1" name="familiaracargoedad5" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Altura </label>
+                <input value="<%= persona.altura %>" type="text" class="form-control" id="exampleInputEmail1"
+                    name="altura" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Barrio </label>
+                <input value="<%= persona.barrio %>" type="text" class="form-control" id="exampleInputEmail1"
+                    name="barrio" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Estudios incompletos</label>
+                <input value="<%= persona.estudiosincompletos %>" type="text" class="form-control"
+                    id="exampleInputEmail1" name="estudiosincompletos" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Conyuge apellido </label>
+                <input value="<%= persona.conyugeapellido %>" type="text" class="form-control" id="exampleInputEmail1"
+                    name="conyugeapellido" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Conyuge nombre </label>
+                <input value="<%= persona.conyugenombre %>" type="text" class="form-control" id="exampleInputEmail1"
+                    name="conyugenombre" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Conyuge DNI </label>
+                <input value="<%= persona.conyugedni %>" type="number" class="form-control" id="exampleInputEmail1"
+                    name="conyugedni" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Conyuge CUIL </label>
+                <input value="<%= persona.conyugecuil %>" type="text" class="form-control" id="exampleInputEmail1"
+                    name="conyugecuil" />
+            </div>
+            <h3>Grupo Familiar 1</h3>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Grupo Familiar Nombre </label>
+                <input value="<%= persona.grupofamiliarNombre %>" type="text" class="form-control"
+                    id="exampleInputEmail1" name="grupofamiliarNombre" />
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Grupo Familiar Apellido </label>
+                <input value="<%= persona.grupofamiliarApellido %>" type="text" class="form-control"
+                    id="exampleInputEmail1" name="grupofamiliarApellido" />
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Grupo Familiar Edad </label>
+                <input value="<%= persona.grupofamiliarEdad %>" type="text" class="form-control" id="exampleInputEmail1"
+                    name="grupofamiliarEdad" />
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Grupo Familiar DNI </label>
+                <input value="<%= persona.grupofamiliarDni %>" type="number" class="form-control"
+                    id="exampleInputEmail1" name="grupofamiliarDni" />
+            </div>
+
+
+            <p>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample2"
+                    aria-expanded="false" aria-controls="collapseExample2">
+                    Mas datos de grupo familiar
+                </button>
+                <!--  <span class="badge badge-secondary"  data-toggle="collapse" data-target="#collapseExample2"
+                        aria-expanded="false" aria-controls="collapseExample2">Mas campos de Grupo Familiar</span> -->
+            </p>
+            <div class="collapse" id="collapseExample2">
+                <div class="card card-body">
+
+                    <h3>Grupo Familiar 2</h3>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Nombre 2 </label>
+                        <input value="<%= persona.grupofamiliarNombre2 %>" type="text" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarNombre2" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Apellido 2 </label>
+                        <input value="<%= persona.grupofamiliarApellido2 %>" type="text" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarApellido2" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Edad 2 </label>
+                        <input value="<%= persona.grupofamiliarEdad2 %>" type="number" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarEdad2" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar DNI 2 </label>
+                        <input value="<%= persona.grupofamiliarDni2 %>" type="number" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarDni2" />
+                    </div>
+
+
+                    <h3>Grupo Familiar 3</h3>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Nombre 3 </label>
+                        <input value="<%= persona.grupofamiliarNombre3 %>" type="text" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarNombre3" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Apellido 3 </label>
+                        <input value="<%= persona.grupofamiliarApellido3 %>" type="text" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarApellido3" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Edad 3 </label>
+                        <input value="<%= persona.grupofamiliarEdad3 %>" type="number" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarEdad3" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar DNI 3 </label>
+                        <input value="<%= persona.grupofamiliarDni3 %>" type="number" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarDni3" />
+                    </div>
+
+
+
+                    <h3>Grupo Familiar 4</h3>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Nombre 4 </label>
+                        <input value="<%= persona.grupofamiliarNombre4 %>" type="text" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarNombre4" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Apellido 4</label>
+                        <input value="<%= persona.grupofamiliarApellido4 %>" type="text" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarApellido4" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Edad 4 </label>
+                        <input value="<%= persona.grupofamiliarEdad4 %>" type="number" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarEdad4" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar DNI 4 </label>
+                        <input value="<%= persona.grupofamiliarDni4 %>" type="number" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarDni4" />
+                    </div>
+
+
+
+
+                    <h3>Grupo Familiar 5</h3>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Nombre 5 </label>
+                        <input value="<%= persona.grupofamiliarNombre5 %>" type="text" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarNombre5" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Apellido 5 </label>
+                        <input value="<%= persona.grupofamiliarApellido5 %>" type="text" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarApellido5" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Edad 5 </label>
+                        <input value="<%= persona.grupofamiliarEdad5 %>" type="number" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarEdad5" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar DNI 5 </label>
+                        <input value="<%= persona.grupofamiliarDni5 %>" type="number" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarDni5" />
+                    </div>
+
+
+
+
+                    <h3>Grupo Familiar 6</h3>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Nombre 6 </label>
+                        <input value="<%= persona.grupofamiliarNombre6 %>" type="text" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarNombre6" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Apellido 6 </label>
+                        <input value="<%= persona.grupofamiliarApellido6 %>" type="text" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarApellido6" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Edad 6 </label>
+                        <input value="<%= persona.grupofamiliarEdad6 %>" type="number" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarEdad6" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar DNI 6 </label>
+                        <input value="<%= persona.grupofamiliarDni6 %>" type="number" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarDni6" />
+                    </div>
+
+
+
+
+                    <h3>Grupo Familiar 7</h3>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Nombre 7 </label>
+                        <input value="<%= persona.grupofamiliarNombre7 %>" type="text" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarNombre7" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Apellido 7 </label>
+                        <input value="<%= persona.grupofamiliarApellido7 %>" type="text" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarApellido7" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Edad 7 </label>
+                        <input value="<%= persona.grupofamiliarEdad7 %>" type="number" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarEdad7" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar DNI 7</label>
+                        <input value="<%= persona.grupofamiliarDni7 %>" type="number" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarDni7" />
+                    </div>
+
+
+
+
+                    <h3>Grupo Familiar 8</h3>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Nombre 8 </label>
+                        <input value="<%= persona.grupofamiliarNombre8 %>" type="text" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarNombre8" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Apellido 8 </label>
+                        <input value="<%= persona.grupofamiliarApellido8 %>" type="text" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarApellido8" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Edad 8 </label>
+                        <input value="<%= persona.grupofamiliarEdad8 %>" type="number" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarEdad8" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar DNI 8 </label>
+                        <input value="<%= persona.grupofamiliarDni8 %>" type="number" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarDni8" />
+                    </div>
+
+                    <h3>Grupo Familiar 9</h3>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Nombre 9 </label>
+                        <input value="<%= persona.grupofamiliarNombre9 %>" type="text" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarNombre9" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Apellido 9 </label>
+                        <input value="<%= persona.grupofamiliarApellido9 %>" type="text" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarApellido9" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Edad 9 </label>
+                        <input value="<%= persona.grupofamiliarEdad9 %>" type="number" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarEdad9" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar DNI 9</label>
+                        <input value="<%= persona.grupofamiliarDni9 %>" type="number" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarDni9" />
+                    </div>
+
+                    <h3>Grupo Familiar 10</h3>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Nombre 10 </label>
+                        <input value="<%= persona.grupofamiliarNombre10 %>" type="text" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarNombre10" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Apellido 10 </label>
+                        <input value="<%= persona.exampleInputEmail1 %>" type="text" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarApellido10" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Edad 10 </label>
+                        <input value="<%= persona.grupofamiliarEdad10 %>" type="number" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarEdad10" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar DNI 10 </label>
+                        <input value="<%= persona.grupofamiliarDni10 %>" type="number" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarDni10" />
+                    </div>
+
+                    <h3>Grupo Familiar 11</h3>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Nombre 11 </label>
+                        <input value="<%= persona.grupofamiliarNombre11 %>" type="text" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarNombre11" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Apellido 11 </label>
+                        <input value="<%= persona.exampleInputEmail1 %>" type="text" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarApellido11" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Edad 11 </label>
+                        <input value="<%= persona.grupofamiliarEdad11 %>" type="number" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarEdad11" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar DNI 11 </label>
+                        <input value="<%= persona.grupofamiliarDni11 %>" type="number" class="form-control"
+                            id="exampleInputEmail1" name="grupofamiliarDni11" />
+                    </div>
+
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<% include ./layouts/footer %>

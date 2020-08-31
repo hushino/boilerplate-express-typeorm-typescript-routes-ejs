@@ -1,0 +1,35 @@
+<% include ./layouts/header %>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Legajo</th>
+            <th scope="col">DNI</th>
+            <th scope="col">Ver</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% if(typeof persona !== 'undefined') { %>
+        <% persona.forEach(function(persona) { %>
+        <tr>
+            <td><%- persona.nombre.substring(0,30)%></td>
+            <td><%- persona.apellido.substring(0,30) %></td>
+            <td><%- persona.legajo %></td>
+            <td><%- persona.dni %></td>
+            <td>
+                <a class="ver" href="/verPersona/<%= persona.id %>">
+                    <button type="button" class="btn btn-info">
+                        Ver
+                    </button>
+                </a>
+            </td>
+
+        </tr>
+        <% }); %>
+        <% } %>
+    </tbody>
+</table>
+
+<% include ./layouts/footer %>

@@ -1,0 +1,595 @@
+<% include ./layouts/header %>
+<h1>Agregar una nueva persona</h1>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <!-- enctype="multipart/form-data" -->
+            <form class="pure-form pure-form-stacked" action="/crearPersona" method="POST">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Nombre</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="nombre" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Apellido</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="apellido" />
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Cuil</label>
+                    <input type="number" class="form-control" id="exampleInputEmail1" name="cuil" />
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">DNI</label>
+                    <input type="number" class="form-control" id="exampleInputEmail1" name="dni" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Legajo</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="legajo" />
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Fecha De Nacimiento</label>
+                    <input type="date" class="form-control" id="exampleInputEmail1" name="fechaDeNacimiento" />
+                </div>
+
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Apodo</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="apodo" />
+                </div>
+                <!-- <div class="form-group">
+                    <label for="exampleInputEmail1">Foto</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="foto" />
+                </div> -->
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Con o sin seguro</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="conosinseguro" />
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Estado Civil</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="estadocivil" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Soltero</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="soltero" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Casado</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="casado" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Conviviente</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="conviviente" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Viudo</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="Viudo" />
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Domicilio</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="domicilio" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Lugar</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="lugar" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Calle</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="calle" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Numero</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="numero" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Telefono Fijo</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="telefonoFijo" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Numero De Celular</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="numeroDeCelular" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Oficio/profecion</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="oficioprofecion" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Nivel De Estudios</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="niveldeestudios" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Grupo Sanguineo</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="grupoSanguineo" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Factor</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="factor" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Donante</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="donante" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Diabetes</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="diabetes" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Hipertension</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="hipertension" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Alergias</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="alergias" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Asma</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="asma" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Otros</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="otros" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Fecha De Ingreso</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="fechadeingreso" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Instrumento Legal</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="instrumentolegal" />
+                </div>
+        </div>
+        <div class="col">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Categoria</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="categoria" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Item</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="item" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Planta</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="planta" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Area</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="area" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Direccion</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="direccion" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Años</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="annos" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Meses</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="meses" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Dias</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="dias" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Realizo ComputoDe Servicios</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="realizoComputoDeServicios" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">posee Conocimiento En Maquinas Viales</label>
+                <input type="text" class="form-control" id="exampleInputEmail1"
+                    name="poseeConocimientoEnMaquinasViales" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">En caso de emergencia celular</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="casoemergenciacelular" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">En caso de emergencia fijo</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="casoemergenciafijo" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">En caso de emergencia nombre</label>
+                <input type="text" class="form-control" id="casoemergencianombre" name="casoemergencianombre" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">En caso de emergencia celular 2</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="casoemergenciacelular2" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">En caso de emergencia fijo 2</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="casoemergenciafijo2" />
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">En caso de emergencia nombre 2</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="casoemergencianombre2" />
+            </div>
+            <p>
+                <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseExample1"
+                    aria-expanded="false" aria-controls="collapseExample1">
+                    Datos de familiar a cargo
+                </button>
+            </p>
+            <div class="collapse" id="collapseExample1">
+                <div class="card card-body">
+
+                    <h3>Familiar a cargo 1</h3>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Nombre</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="familiaracargonombre" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">DNI</label>
+                        <input type="number" class="form-control" id="exampleInputEmail1" name="familiaracargodni" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Edad</label>
+                        <input type="number" class="form-control" id="exampleInputEmail1" name="familiaracargoedad" />
+                    </div>
+
+
+                    <h3>Familiar a cargo 2</h3>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Nombre</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="familiaracargonombre2" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">DNI</label>
+                        <input type="number" class="form-control" id="exampleInputEmail1" name="familiaracargodni2" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Edad</label>
+                        <input type="number" class="form-control" id="exampleInputEmail1" name="familiaracargoedad2" />
+                    </div>
+
+
+                    <h3>Familiar a cargo 3</h3>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Nombre</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="familiaracargonombre3" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">DNI</label>
+                        <input type="number" class="form-control" id="exampleInputEmail1" name="familiaracargodni3" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Edad</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="familiaracargoedad3" />
+                    </div>
+
+                    <h3>Familiar a cargo 4</h3>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Nombre</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="familiaracargonombre4" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">DNI</label>
+                        <input type="number" class="form-control" id="exampleInputEmail1" name="familiaracargodni4" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Edad</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="familiaracargoedad4" />
+                    </div>
+
+                    <h3>Familiar a cargo 5</h3>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Nombre</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="familiaracargonombre5" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">DNI</label>
+                        <input type="number" class="form-control" id="exampleInputEmail1" name="familiaracargodni5" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Edad</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="familiaracargoedad5" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Altura </label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="altura" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Barrio </label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="barrio" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Estudios incompletos</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="estudiosincompletos" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Conyuge apellido </label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="conyugeapellido" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Conyuge nombre </label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="conyugenombre" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Conyuge DNI </label>
+                <input type="number" class="form-control" id="exampleInputEmail1" name="conyugedni" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Conyuge CUIL </label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="conyugecuil" />
+            </div>
+            <h3>Grupo Familiar 1</h3>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Grupo Familiar Nombre </label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="grupofamiliarNombre" />
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Grupo Familiar Apellido </label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="grupofamiliarApellido" />
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Grupo Familiar Edad </label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="grupofamiliarEdad" />
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Grupo Familiar DNI </label>
+                <input type="number" class="form-control" id="exampleInputEmail1" name="grupofamiliarDni" />
+            </div>
+
+
+            <p>
+                <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseExample2"
+                    aria-expanded="false" aria-controls="collapseExample2">
+                    Mas datos de grupo familiar
+                </button>
+                <!--  <span class="badge badge-secondary"  data-toggle="collapse" data-target="#collapseExample2"
+                        aria-expanded="false" aria-controls="collapseExample2">Mas campos de Grupo Familiar</span> -->
+            </p>
+            <div class="collapse" id="collapseExample2">
+                <div class="card card-body">
+
+                    <h3>Grupo Familiar 2</h3>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Nombre 2 </label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="grupofamiliarNombre2" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Apellido 2 </label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="grupofamiliarApellido2" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Edad 2 </label>
+                        <input type="number" class="form-control" id="exampleInputEmail1" name="grupofamiliarEdad2" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar DNI 2 </label>
+                        <input type="number" class="form-control" id="exampleInputEmail1" name="grupofamiliarDni2" />
+                    </div>
+
+
+                    <h3>Grupo Familiar 3</h3>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Nombre 3 </label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="grupofamiliarNombre3" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Apellido 3 </label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="grupofamiliarApellido3" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Edad 3 </label>
+                        <input type="number" class="form-control" id="exampleInputEmail1" name="grupofamiliarEdad3" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar DNI 3 </label>
+                        <input type="number" class="form-control" id="exampleInputEmail1" name="grupofamiliarDni3" />
+                    </div>
+
+
+
+                    <h3>Grupo Familiar 4</h3>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Nombre 4 </label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="grupofamiliarNombre4" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Apellido 4</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="grupofamiliarApellido4" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Edad 4 </label>
+                        <input type="number" class="form-control" id="exampleInputEmail1" name="grupofamiliarEdad4" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar DNI 4 </label>
+                        <input type="number" class="form-control" id="exampleInputEmail1" name="grupofamiliarDni4" />
+                    </div>
+
+
+
+
+                    <h3>Grupo Familiar 5</h3>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Nombre 5 </label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="grupofamiliarNombre5" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Apellido 5 </label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="grupofamiliarApellido5" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Edad 5 </label>
+                        <input type="number" class="form-control" id="exampleInputEmail1" name="grupofamiliarEdad5" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar DNI 5 </label>
+                        <input type="number" class="form-control" id="exampleInputEmail1" name="grupofamiliarDni5" />
+                    </div>
+
+
+
+
+                    <h3>Grupo Familiar 6</h3>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Nombre 6 </label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="grupofamiliarNombre6" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Apellido 6 </label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="grupofamiliarApellido6" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Edad 6 </label>
+                        <input type="number" class="form-control" id="exampleInputEmail1" name="grupofamiliarEdad6" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar DNI 6 </label>
+                        <input type="number" class="form-control" id="exampleInputEmail1" name="grupofamiliarDni6" />
+                    </div>
+
+
+
+
+                    <h3>Grupo Familiar 7</h3>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Nombre 7 </label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="grupofamiliarNombre7" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Apellido 7 </label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="grupofamiliarApellido7" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Edad 7 </label>
+                        <input type="number" class="form-control" id="exampleInputEmail1" name="grupofamiliarEdad7" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar DNI 7</label>
+                        <input type="number" class="form-control" id="exampleInputEmail1" name="grupofamiliarDni7" />
+                    </div>
+
+
+
+
+                    <h3>Grupo Familiar 8</h3>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Nombre 8 </label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="grupofamiliarNombre8" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Apellido 8 </label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="grupofamiliarApellido8" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Edad 8 </label>
+                        <input type="number" class="form-control" id="exampleInputEmail1" name="grupofamiliarEdad8" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar DNI 8 </label>
+                        <input type="number" class="form-control" id="exampleInputEmail1" name="grupofamiliarDni8" />
+                    </div>
+
+                    <h3>Grupo Familiar 9</h3>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Nombre 9 </label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="grupofamiliarNombre9" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Apellido 9 </label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="grupofamiliarApellido9" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Edad 9 </label>
+                        <input type="number" class="form-control" id="exampleInputEmail1" name="grupofamiliarEdad9" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar DNI 9</label>
+                        <input type="number" class="form-control" id="exampleInputEmail1" name="grupofamiliarDni9" />
+                    </div>
+
+                    <h3>Grupo Familiar 10</h3>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Nombre 10 </label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="grupofamiliarNombre10" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Apellido 10 </label>
+                        <input type="text" class="form-control" id="exampleInputEmail1"
+                            name="grupofamiliarApellido10" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Edad 10 </label>
+                        <input type="number" class="form-control" id="exampleInputEmail1" name="grupofamiliarEdad10" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar DNI 10 </label>
+                        <input type="number" class="form-control" id="exampleInputEmail1" name="grupofamiliarDni10" />
+                    </div>
+
+                    <h3>Grupo Familiar 11</h3>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Nombre 11 </label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="grupofamiliarNombre11" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Apellido 11 </label>
+                        <input type="text" class="form-control" id="exampleInputEmail1"
+                            name="grupofamiliarApellido11" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar Edad 11 </label>
+                        <input type="number" class="form-control" id="exampleInputEmail1" name="grupofamiliarEdad11" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Grupo Familiar DNI 11 </label>
+                        <input type="number" class="form-control" id="exampleInputEmail1" name="grupofamiliarDni11" />
+                    </div>
+
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+<% include ./layouts/footer %>

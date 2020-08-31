@@ -1,0 +1,34 @@
+<% include ./layouts/header %>
+<h1>Agregar Licencia a <%= persona.nombre %> <%= persona.apellido %> <%= persona.dni %></h1>
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <form class="pure-form pure-form-stacked" action="/agregarLicencia" method="POST">
+                <div class="form-group" hidden>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="id"
+                        value="<%= persona.id %>" />
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Fecha de Licencia</label>
+                    <input type="date" class="form-control" id="exampleInputEmail1" name="fechaLicencia" />
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Numero De Dias</label>
+                    <input type="number" class="form-control" id="exampleInputEmail1" name="numeroDeDias" />
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Observaciones</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="observaciones" />
+                </div>
+                <!--  <div class="form-group">
+                    <label for="exampleInputEmail1">Usuarios Mod</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="usuariosMod" />
+                </div> -->
+
+                <button type="submit" class="btn btn-primary">Agregar</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+<% include ./layouts/footer %>

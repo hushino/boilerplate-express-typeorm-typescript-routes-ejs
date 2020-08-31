@@ -1,0 +1,342 @@
+<% include ./layouts/header %>
+
+<script>
+    function printDiv(divName) {
+        var printContents = document.getElementById(divName).innerHTML;
+        var originalContents = document.body.innerHTML;
+
+        document.body.innerHTML = printContents;
+
+        window.print();
+
+        document.body.innerHTML = originalContents;
+    }
+</script>
+<div class="container">
+    <!-- <h4>Agregar:</h4>
+    <div class="row">
+        <div class="col-sm">
+            <button type="button" class="btn btn-secondary" style="margin-top: 10px;"><a
+                    style="text-decoration: none;color: lightgrey;"
+                    href="/agregarLicencia/<%= persona.id %>">Licencia</a></button>
+            <button type="button" class="btn btn-secondary" style="margin-top: 10px;"><a
+                    style="text-decoration: none;color: lightgrey;"
+                    href="/agregarGarantia/<%= persona.id %>">Garantia</a></button>
+            <button type="button" class="btn btn-secondary" style="margin-top: 10px;"><a
+                    style="text-decoration: none;color: lightgrey;"
+                    href="/agregarEmbargo/<%= persona.id %>">Embargo</a></button>
+            <button type="button" class="btn btn-secondary" style="margin-top: 10px;"><a
+                    style="text-decoration: none;color: lightgrey;"
+                    href="/agregarConcPremios/<%= persona.id %>">ConcPremios</a></button>
+            <button type="button" class="btn btn-secondary" style="margin-top: 10px;"><a
+                    style="text-decoration: none;color: lightgrey;" href="/altasAscensosBajas/<%= persona.id %>">Altas,
+                    Ascensos, Bajas</a></button>
+            <button type="button" class="btn btn-secondary" style="margin-top: 10px;"><a
+                    style="text-decoration: none;color: lightgrey;"
+                    href="/agregarOtrosServiciosPrestados/<%= persona.id %>">Otros servicios prestados</a></button>
+
+        </div>
+    </div> -->
+    <div class="row">
+        <div class="col">
+            <button type="button" class="btn btn-secondary" onclick="printDiv('print')">
+                Imprimir
+            </button>
+            <div id="print">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Nombre:</h5><%- persona.nombre %>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Apellido:</h5><%- persona.apellido %>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Cuil:</h5><%- persona.cuil%>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">DNI:</h5><%- persona.dni%>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Legajo:</h5><%- persona.legajo%>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Fecha De Nacimiento:</h5><%- persona.fechaDeNacimiento%>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Apodo:</h5><%- persona.apodo%>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Soltero:</h5><%- persona.soltero%>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Casado:</h5><%- persona.casado %>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Conviviente:</h5><%- persona.conviviente %>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Viudo:</h5><%- persona.viudo %>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Domicilio:</h5><%- persona.domicilio %>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Lugar:</h5><%- persona.lugar %>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Calle:</h5><%- persona.calle %>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Numero:</h5><%- persona.numero %>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Telefono Fijo:</h5><%- persona.telefonoFijo %>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Numero De Celular:</h5><%- persona.numeroDeCelular %>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Oficio/Profecion:</h5><%- persona.oficioprofecion %>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Nivel de estudios:</h5><%- persona.niveldeestudios %>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Grupo Sanguineo:</h5><%- persona.grupoSanguineo %>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Factor:</h5><%- persona.factor %>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Donante:</h5><%- persona.donante %>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Diabetes:</h5><%- persona.diabetes %>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Hipertension:</h5><%- persona.hipertension %>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Alergias:</h5><%- persona.alergias %>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Asma:</h5><%- persona.asma %>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Otros:</h5><%- persona.otros %>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Fecha de ingreso:</h5><%- persona.fechadeingreso %>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Instrumento legal:</h5><%- persona.instrumentolegal %>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Categoria:</h5><%- persona.categoria %>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Item:</h5><%- persona.item %>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Planta:</h5><%- persona.planta %>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Area:</h5><%- persona.area %>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Direccion:</h5><%- persona.direccion %>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Años:</h5><%- persona.annos %>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Meses:</h5><%- persona.meses %>
+                    </li>
+
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Dias:</h5><%- persona.dias %>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Realizo Computo De Servicios:</h5><%- persona.realizoComputoDeServicios %>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Posee Conocimiento En Maquinas Viales:</h5>
+                        <%- persona.poseeConocimientoEnMaquinasViales %>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Altura:</h5><%- persona.altura%>
+                    </li>
+
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Barrio:</h5><%- persona.barrio%>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">Estudios incompletos:</h5><%- persona.estudiosincompletos%>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">En caso emergencia celular:</h5><%- persona.casoemergenciacelular %>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">En caso emergencia fijo:</h5><%- persona.casoemergenciafijo %>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">En caso emergencia nombre:</h5><%- persona.casoemergencianombre %>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">En caso emergencia celular 2:</h5><%- persona.casoemergenciacelular2 %>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">En caso emergencia fijo 2:</h5><%- persona.casoemergenciafijo2 %>
+                    </li>
+                    <li class="list-group-item">
+                        <h5 class="mb-1">En caso emergencia nombre 2:</h5><%- persona.casoemergencianombre2 %>
+                    </li>
+                    <li class="list-group-item">
+                        <h3>Conyuge</h3>
+                        <h5 class="mb-1">Nombre:</h5><%- persona.conyugenombre%>
+                        <h5 class="mb-1">Apellido:</h5><%- persona.conyugeapellido%>
+                        <h5 class="mb-1">Conyuge DNI:</h5><%- persona.conyugedni%>
+                        <h5 class="mb-1">CUIL:</h5><%- persona.conyugecuil%>
+                    </li>
+                    <p>
+                        <button class="btn btn-primary" type="button" data-toggle="collapse"
+                            data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                            Datos de familiar a cargo
+                        </button>
+                    </p>
+                    <div class="collapse" id="collapseExample">
+                        <div class="card card-body">
+
+                            <li class="list-group-item">
+                                <h3>Familiar acargo 1</h3>
+                                <h5 class="mb-1">nombre:</h5><%- persona.familiaracargonombre%>
+                                <h5 class="mb-1">DNI:</h5><%- persona.familiaracargodni%>
+                                <h5 class="mb-1">edad:</h5><%- persona.familiaracargoedad%>
+
+                            </li>
+                            <li class="list-group-item">
+                                <h3>Familiar acargo 2</h3>
+                                <h5 class="mb-1">nombre:</h5><%- persona.familiaracargonombre2%>
+                                <h5 class="mb-1">DNI:</h5><%- persona.familiaracargodni2%>
+                                <h5 class="mb-1">Edad:</h5><%- persona.familiaracargoedad2%>
+
+                            </li>
+                            <li class="list-group-item">
+                                <h3>Familiar acargo 3</h3>
+                                <h5 class="mb-1">Nombre:</h5><%- persona.familiaracargonombre3%>
+                                <h5 class="mb-1">DNI:</h5><%- persona.familiaracargodni3%>
+                                <h5 class="mb-1">Edad:</h5><%- persona.familiaracargoedad3%>
+
+                            </li>
+                            <li class="list-group-item">
+                                <h3>Familiar acargo 4</h3>
+                                <h5 class="mb-1">Nombre:</h5><%- persona.familiaracargonombre4%>
+                                <h5 class="mb-1">DNI:</h5><%- persona.familiaracargodni4%>
+                                <h5 class="mb-1">Edad:</h5><%- persona.familiaracargoedad4%>
+
+                            </li>
+                            <li class="list-group-item">
+                                <h3>Familiar acargo 5</h3>
+                                <h5 class="mb-1">Nombre:</h5><%- persona.familiaracargonombre5%>
+                                <h5 class="mb-1">DNI:</h5><%- persona.familiaracargodni5%>
+                                <h5 class="mb-1">Edad:</h5><%- persona.familiaracargoedad5%>
+                            </li>
+                        </div>
+                    </div>
+
+                    <p>
+                        <button class="btn btn-primary" type="button" data-toggle="collapse"
+                            data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                            Datos de grupo familiar
+                        </button>
+                    </p>
+                    <div class="collapse" id="collapseExample2">
+                        <div class="card card-body">
+
+                            <li class="list-group-item">
+                                <h3>Grupo familiar 1</h3>
+                                <h5 class="mb-1">Nombre:</h5><%- persona.grupofamiliarNombre%>
+                                <h5 class="mb-1">Apellido:</h5><%- persona.grupofamiliarApellido%>
+                                <h5 class="mb-1">Edad:</h5><%- persona.grupofamiliarEdad%>
+                                <h5 class="mb-1">DNI:</h5><%- persona.grupofamiliarDni%>
+                            </li>
+                            <li class="list-group-item">
+                                <h3>Grupo familiar 2</h3>
+                                <h5 class="mb-1">Nombre:</h5><%- persona.grupofamiliarNombre2%>
+                                <h5 class="mb-1">Apellido:</h5><%- persona.grupofamiliarApellido2%>
+                                <h5 class="mb-1">Edad:</h5><%- persona.grupofamiliarEdad2%>
+                                <h5 class="mb-1">DNI:</h5><%- persona.grupofamiliarDni2%>
+                            </li>
+                            <li class="list-group-item">
+                                <h3>Grupo familiar 3</h3>
+                                <h5 class="mb-1">Nombre:</h5><%- persona.grupofamiliarNombre3%>
+                                <h5 class="mb-1">Apellido:</h5><%- persona.grupofamiliarApellido3%>
+                                <h5 class="mb-1">Edad:</h5><%- persona.grupofamiliarEdad3%>
+                                <h5 class="mb-1">DNI:</h5><%- persona.grupofamiliarDni3%>
+                            </li>
+                            <li class="list-group-item">
+                                <h3>Grupo familiar 4</h3>
+                                <h5 class="mb-1">Nombre:</h5><%- persona.grupofamiliarNombre4%>
+                                <h5 class="mb-1">Apellido:</h5><%- persona.grupofamiliarApellido4%>
+                                <h5 class="mb-1">Edad:</h5><%- persona.grupofamiliarEdad4%>
+                                <h5 class="mb-1">DNI:</h5><%- persona.grupofamiliarDni4%>
+                            </li>
+                            <li class="list-group-item">
+                                <h3>Grupo familiar 5</h3>
+                                <h5 class="mb-1">Nombre:</h5><%- persona.grupofamiliarNombre5%>
+                                <h5 class="mb-1">Apellido:</h5><%- persona.grupofamiliarApellido5%>
+                                <h5 class="mb-1">Edad:</h5><%- persona.grupofamiliarEdad5%>
+                                <h5 class="mb-1">DNI:</h5><%- persona.grupofamiliarDni5%>
+                            </li>
+                            <li class="list-group-item">
+                                <h3>Grupo familiar 6</h3>
+                                <h5 class="mb-1">Nombre:</h5><%- persona.grupofamiliarNombre6%>
+                                <h5 class="mb-1">Apellido:</h5><%- persona.grupofamiliarApellido6%>
+                                <h5 class="mb-1">Edad:</h5><%- persona.grupofamiliarEdad6%>
+                                <h5 class="mb-1">DNI:</h5><%- persona.grupofamiliarDni6%>
+                            </li>
+                            <li class="list-group-item">
+                                <h3>Grupo familiar 7</h3>
+                                <h5 class="mb-1">Nombre:</h5><%- persona.grupofamiliarNombre7%>
+                                <h5 class="mb-1">Apellido:</h5><%- persona.grupofamiliarApellido7%>
+                                <h5 class="mb-1">Edad:</h5><%- persona.grupofamiliarEdad7%>
+                                <h5 class="mb-1">DNI:</h5><%- persona.grupofamiliarDni7%>
+                            </li>
+                            <li class="list-group-item">
+                                <h3>Grupo familiar 8</h3>
+                                <h5 class="mb-1">Nombre:</h5><%- persona.grupofamiliarNombre8%>
+                                <h5 class="mb-1">Apellido:</h5><%- persona.grupofamiliarApellido8%>
+                                <h5 class="mb-1">Edad:</h5><%- persona.grupofamiliarEdad8%>
+                                <h5 class="mb-1">DNI:</h5><%- persona.grupofamiliarDni8%>
+                            <li class="list-group-item">
+                                <h3>Grupo familiar 9</h3>
+                                <h5 class="mb-1">Nombre:</h5><%- persona.grupofamiliarNombre9%>
+                                <h5 class="mb-1">Apellido:</h5><%- persona.grupofamiliarApellido9%>
+                                <h5 class="mb-1">Edad:</h5><%- persona.grupofamiliarEdad9%>
+                                <h5 class="mb-1">DNI:</h5><%- persona.grupofamiliarDni9%>
+                            </li>
+                            <li class="list-group-item">
+                                <h3>Grupo familiar 10</h3>
+                                <h5 class="mb-1">Nombre:</h5><%- persona.grupofamiliarNombre10%>
+                                <h5 class="mb-1">Apellido:</h5><%- persona.grupofamiliarApellido10%>
+                                <h5 class="mb-1">Edad:</h5><%- persona.grupofamiliarEdad10%>
+                                <h5 class="mb-1">DNI:</h5><%- persona.grupofamiliarDni10%>
+                            </li>
+                            <li class="list-group-item">
+                                <h3>Grupo familiar 11</h3>
+                                <h5 class="mb-1">Nombre:</h5><%- persona.grupofamiliarNombre11%>
+                                <h5 class="mb-1">Apellido:</h5><%- persona.grupofamiliarApellido11%>
+                                <h5 class="mb-1">Edad:</h5><%- persona.grupofamiliarEdad11%>
+                                <h5 class="mb-1">DNI:</h5><%- persona.grupofamiliarDni11%>
+                            </li>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<% include ./layouts/footer %>

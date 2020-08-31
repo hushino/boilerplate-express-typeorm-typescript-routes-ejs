@@ -1,0 +1,30 @@
+<% include ./layouts/header %>
+<h1>Agregar Garantia a <%= persona.nombre %> <%= persona.apellido %> <%= persona.dni %></h1>
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <form class="pure-form pure-form-stacked" action="/agregarGarantia" method="POST">
+                <div class="form-group" hidden>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="_id"
+                        value="<%= persona._id %>" />
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Presentada Fecha</label>
+                    <input type="date" class="form-control" id="exampleInputEmail1" name="presentadaFecha" />
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Garantia</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="garantia" />
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Observaciones</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="observaciones" />
+                </div>
+
+                <button type="submit" class="btn btn-primary">Agregar</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+<% include ./layouts/footer %>
